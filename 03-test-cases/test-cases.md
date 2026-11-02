@@ -8,8 +8,8 @@
   2. When the user enters valid username and password.
   3. And clicks the "Login" button.
 - **Expected Result:** User is redirected to the Admin Dashboard, and the "Rooms" page is visible.
-- **Actual Result:** _(To be filled during execution)_
-- **Status:** _(Pass/Fail)_
+- **Actual Result:** User successfully logged in and was redirected to the Admin Dashboard.
+- **Status:** Pass
 
 ---
 
@@ -21,8 +21,8 @@
   2. When the user enters a valid username but an invalid password.
   3. And clicks the "Login" button.
 - **Expected Result:** An error message appears stating "Invalid credentials", and the user is not logged in.
-- **Actual Result:** _(To be filled during execution)_
-- **Status:** _(Pass/Fail)_
+- **Actual Result:** An error message appeared stating "Invalid credentials", and login was rejected.
+- **Status:** Pass
 
 ---
 
@@ -36,8 +36,8 @@
   4. And selects a room and fills in valid guest details (Name, Email, Phone).
   5. And clicks "Reserve Now".
 - **Expected Result:** A confirmation screen appears showing the correct booking details and total price.
-- **Actual Result:** _(To be filled during execution)_
-- **Status:** _(Pass/Fail)_
+- **Actual Result:** The page got stuck on an infinite loading spinner and never displayed the form.
+- **Status:** Fail (See BUG-001)
 
 ---
 
@@ -50,8 +50,9 @@
   3. And enters an email address without an "@" symbol.
   4. And clicks "Submit".
 - **Expected Result:** The form should not submit, and an error message should say "Please enter a valid email address."
-- **Actual Result:** _(To be filled during execution)_
-- **Status:** _(Pass/Fail)_
+- **Actual Result:** The form correctly rejected the submission and displayed 3 validation error messages (Message too short, invalid email, invalid phone).
+- **Status:** Pass
+
 ---
 
 ## TC-CONTACT-02: Submit contact form with valid data
@@ -61,6 +62,6 @@
   1. Given the user navigates to the "Contact" section.
   2. When the user fills in all fields with valid data.
   3. And clicks "Submit".
-- **Expected Result:** A success message appears stating "Thanks for getting in touch [Name]!".
-- **Actual Result:** Success message displayed correctly.
-- **Status:** Pass
+- **Expected Result:** A success message appears stating "Thanks for getting in touch [Name]!" AND the message appears in the Admin dashboard.
+- **Actual Result:** Success message displayed correctly, BUT the message did not appear in the Admin dashboard.
+- **Status:** Fail (See BUG-002)
