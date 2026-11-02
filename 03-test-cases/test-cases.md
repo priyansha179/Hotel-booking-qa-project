@@ -52,3 +52,15 @@
 - **Expected Result:** The form should not submit, and an error message should say "Please enter a valid email address."
 - **Actual Result:** _(To be filled during execution)_
 - **Status:** _(Pass/Fail)_
+---
+
+## TC-CONTACT-02: Submit contact form with valid data
+- **Preconditions:** User is on the public front page.
+- **Test Data:** Valid Name, valid Email (`test@test.com`), valid 11-digit Phone, valid Subject, and a Message longer than 20 characters.
+- **Steps:**
+  1. Given the user navigates to the "Contact" section.
+  2. When the user fills in all fields with valid data.
+  3. And clicks "Submit".
+- **Expected Result:** A success message appears stating "Thanks for getting in touch [Name]!".
+- **Actual Result:** Success message displayed correctly.
+- **Status:** Pass
